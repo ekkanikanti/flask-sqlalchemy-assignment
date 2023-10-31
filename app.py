@@ -5,6 +5,8 @@ from src.repositories.movie_repository import movie_repository_singleton
 app = Flask(__name__)
 
 # TODO: DB connection
+from src.models import db
+db.init_app(app)
 
 @app.get('/')
 def index():
